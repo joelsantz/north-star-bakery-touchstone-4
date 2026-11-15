@@ -642,7 +642,8 @@ button {
     }
 
     .builder-controls button {
-        margin-bottom: 0.05rem;
+        align-self: end;
+        margin-bottom: 0;
     }
 }
 
