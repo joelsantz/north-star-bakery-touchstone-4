@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact North Star Bakery or send a pre-order request.">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact | North Star Bakery</title>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo-link" href="index.html">
+                <img class="logo" src="media/bakery-logo.png" alt="North Star Bakery" width="180" height="154">
+            </a>
+            <div class="brand-copy">
+                <p class="eyebrow">Plan your next order</p>
+                <h1>Contact and Pre-Orders</h1>
+            </div>
+            <nav aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="site-main contact-layout">
+        <section class="contact-details">
+            <p class="eyebrow">Visit or write to us</p>
+            <h2>Visit the Bakery</h2>
+            <address>
+                North Star Bakery<br>
+                145 Maple Street<br>
+                Cedar Grove<br>
+                <a href="mailto:hello@northstarbakery.example">hello@northstarbakery.example</a>
+            </address>
+            <h3>Hours</h3>
+            <p>Monday through Saturday:<br><time datetime="07:00">7:00 a.m.</time> to <time datetime="18:00">6:00 p.m.</time></p>
+            <p>Sunday:<br><time datetime="08:00">8:00 a.m.</time> to <time datetime="14:00">2:00 p.m.</time></p>
+        </section>
+
+        <section class="form-panel">
+            <p class="eyebrow">We are happy to help</p>
+            <h2>Send a Request</h2>
+            <p>Fields marked with an asterisk (*) are required. Please send pre-orders at least two days before your preferred pickup date.</p>
+            <form id="request-form" action="#" method="post" novalidate>
+                <p id="storage-message" class="status-message" role="status" aria-live="polite"></p>
+                <div class="form-row">
+                    <label for="customer-name">Name *</label>
+                    <input type="text" id="customer-name" name="customer-name" autocomplete="name" minlength="2" maxlength="60" aria-describedby="customer-name-error" required>
+                    <span class="field-error" id="customer-name-error"></span>
+                </div>
+
+                <div class="form-row">
+                    <label for="customer-email">Email *</label>
+                    <input type="email" id="customer-email" name="customer-email" autocomplete="email" aria-describedby="customer-email-error" required>
+                    <span class="field-error" id="customer-email-error"></span>
+                </div>
+
+                <div class="form-row">
+                    <label for="pickup-date">Preferred pickup date *</label>
+                    <input type="date" id="pickup-date" name="pickup-date" aria-describedby="pickup-date-error" required>
+                    <span class="field-error" id="pickup-date-error"></span>
+                </div>
+
+                <fieldset aria-describedby="request-type-error">
+                    <legend>Request type *</legend>
+                    <div class="choice-row">
+                        <input type="radio" id="pre-order" name="request-type" value="pre-order" required>
+                        <label for="pre-order">Pre-order</label>
+                    </div>
+                    <div class="choice-row">
+                        <input type="radio" id="general-question" name="request-type" value="general-question">
+                        <label for="general-question">General question</label>
+                    </div>
+                    <span class="field-error" id="request-type-error"></span>
+                </fieldset>
+
+                <div class="form-row">
+                    <label for="item-details">Item details *</label>
+                    <textarea id="item-details" name="item-details" rows="6" minlength="10" maxlength="500" placeholder="Tell us the item, quantity, size, or message you need." aria-describedby="item-details-error" required></textarea>
+                    <span class="field-error" id="item-details-error"></span>
+                </div>
+
+                <div class="form-row">
+                    <label for="allergy-notes">Allergy notes, if applicable</label>
+                    <textarea id="allergy-notes" name="allergy-notes" rows="4" maxlength="300" placeholder="List any allergies or write none."></textarea>
+                </div>
+
+                <button type="submit">Send Request</button>
+                <p id="form-result" class="form-result" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 North Star Bakery. Handmade for our community.</p>
+            <a href="products.html">View bakery products</a>
+        </div>
+    </footer>
+    <script src="app.js" defer></script>
+</body>
+</html>

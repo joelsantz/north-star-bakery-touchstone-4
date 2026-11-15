@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore handmade breads, pastries, and cakes from North Star Bakery.">
+    <link rel="stylesheet" href="styles.css">
+    <title>Products | North Star Bakery</title>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo-link" href="index.html">
+                <img class="logo" src="media/bakery-logo.png" alt="North Star Bakery" width="180" height="154">
+            </a>
+            <div class="brand-copy">
+                <p class="eyebrow">Made by hand each day</p>
+                <h1>Our Bakery Products</h1>
+            </div>
+            <nav aria-label="Primary navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" aria-current="page">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="site-main">
+        <section class="page-intro">
+            <p class="eyebrow">Simple ingredients and seasonal choices</p>
+            <h2>Find Something Fresh</h2>
+            <p>Our menu changes with the seasons. Please contact us to ask about today's selection or to place a pre-order.</p>
+        </section>
+
+        <div class="product-grid">
+            <section class="product-card">
+                <img src="media/bakery-bread.png" alt="A selection of handmade bread cooling on a bakery table" width="500" height="500">
+                <h2>Breads</h2>
+                <ul class="price-list">
+                    <li><strong>Country Sourdough</strong><span>Crisp crust and a soft center. $7 to $9.</span></li>
+                    <li><strong>Honey Wheat</strong><span>A mild loaf made with whole wheat and local honey. $6 to $8.</span></li>
+                    <li><strong>Rosemary Focaccia</strong><span>Soft bread with olive oil and fresh rosemary. $8 to $12.</span></li>
+                </ul>
+            </section>
+
+            <section class="product-card">
+                <h2>Pastries</h2>
+                <ul class="price-list">
+                    <li><strong>Butter Croissant</strong><span>Light, flaky, and baked every morning. $3 to $4.</span></li>
+                    <li><strong>Cinnamon Roll</strong><span>Soft dough with cinnamon filling and vanilla glaze. $4 to $5.</span></li>
+                    <li><strong>Fruit Danish</strong><span>Seasonal fruit with a creamy filling. $4 to $6.</span></li>
+                </ul>
+            </section>
+
+            <section class="product-card">
+                <h2>Cakes</h2>
+                <ul class="price-list">
+                    <li><strong>Celebration Cakes</strong><span>Vanilla, chocolate, or lemon cakes for birthdays. $35 to $75.</span></li>
+                    <li><strong>Event Cakes</strong><span>Custom sizes and simple decorations for local events. Starting at $65.</span></li>
+                    <li><strong>Small Cakes</strong><span>Six-inch cakes for family gatherings. $28 to $40.</span></li>
+                </ul>
+                <p>Prices may change based on size, flavor, and decoration.</p>
+            </section>
+        </div>
+
+        <section class="order-builder" aria-labelledby="order-builder-title">
+            <div class="order-builder-copy">
+                <p class="eyebrow">Plan before you contact us</p>
+                <h2 id="order-builder-title">Build a Pre-Order List</h2>
+                <p>Select an item and quantity. Your list will stay available when you return and will be added to the contact form.</p>
+            </div>
+
+            <form id="preorder-builder-form" class="builder-controls" novalidate>
+                <div class="form-row">
+                    <label for="product-select">Bakery item</label>
+                    <select id="product-select" name="product-select" required>
+                        <option value="">Choose an item</option>
+                    </select>
+                </div>
+                <div class="form-row quantity-field">
+                    <label for="product-quantity">Quantity</label>
+                    <input type="number" id="product-quantity" name="product-quantity" min="1" max="12" value="1" required>
+                </div>
+                <button type="submit">Add to List</button>
+            </form>
+
+            <p id="builder-message" class="status-message" role="status" aria-live="polite"></p>
+            <div class="saved-list-panel">
+                <h3>Your Saved List</h3>
+                <ul id="saved-order-list" class="saved-order-list"></ul>
+                <p id="saved-order-empty">Your list is empty.</p>
+                <p id="saved-order-count" class="saved-order-count"></p>
+                <a class="button-link" href="contact.html">Continue to Request Form</a>
+            </div>
+        </section>
+
+        <section class="signature-panel">
+            <figure>
+                <img src="media/bakery-signature-loaf.png" alt="A rustic sourdough loaf resting on a checked baker's cloth" width="500" height="500">
+                <figcaption>Our Signature Loaf is a slow-fermented rustic sourdough baked fresh each morning.</figcaption>
+            </figure>
+            <div>
+                <p class="eyebrow">A neighborhood favorite</p>
+                <h2>Our Signature Loaf</h2>
+                <p>A long fermentation creates a deep flavor and a crisp crust. Quantities are limited each day.</p>
+                <a class="button-link" href="contact.html">Request a loaf</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 North Star Bakery. Handmade for our community.</p>
+            <a href="contact.html">Contact and pre-orders</a>
+        </div>
+    </footer>
+    <script src="app.js" defer></script>
+</body>
+</html>
